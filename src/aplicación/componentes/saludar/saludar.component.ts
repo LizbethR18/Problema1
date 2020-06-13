@@ -9,12 +9,20 @@ export class SaludarComponent implements OnInit {
   @input() nombre:string = 'Lizbeth';
   @output() saludar: EventEmitter<string> = new EventEmitter<string>();
   
-  public nombres: Array<string>= [];
+  nombres: Array<string>= [];
+  nombreList:string="Jaziel"
+  name:string
   
-  
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() { 
   }
+  onClick(){
+    this.saludar.emit('Hola');
+  }
+
+  onButtonClick(name){
+    this.nombres.push(name);
+    console.log(this.nombres)
+  }
+  
 
 }
