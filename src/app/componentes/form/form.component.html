@@ -1,24 +1,62 @@
 <form >
     <div class="form-group">
+        <div class="col-md-6 mb-3">
     <label>Nombre completo</label>
-    <input type="text"><br>
-    <label>Genero</label>
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-        <label class="form-check-label" for="defaultCheck1">
-          Femenino
-        </label>
+    <input FormControlName="nombre" class="form-control" type="text">
+    <!--div *ngIf="sigupForm.get('nombre').hasError('required') && 
+        sigupForm.get('nombre').touched">Campo requerido, Ingrese su nombre completo
+    </div-->
+</div>
+    <div class="col-md-6 mb-3"><label>Genero</label><br>
+    <div class="form-check form-check-inline">
+        <input FormControlName="genero" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="F">
+        <label class="form-check-label" for="inlineCheckbox1">Femenino</label>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-        <label class="form-check-label" for="defaultCheck2">
-          Masculino
-        </label>
+      <div class="form-check form-check-inline">
+        <input FormControlName="genero" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="M">
+        <label class="form-check-label" for="inlineCheckbox2">Masculino</label>
       </div>
-    <label>Dirección</label>
-    <input type="text"><br>
-    <label>Correo</label>
-    <input type="text"><br>
-    <label></label>
+      <!--div class="err"  *ngIf=" sigupForm.get('genero').hasError('required')" >
+        Campo requerido, Seleccione un genero
+    </div-->
     </div>
+      <div class="col-md-6 mb-3">
+    <label>Dirección</label>
+    <input FormControlName="direccion" class="form-control" type="text"><br>
+    <!--div *ngIf="sigupForm.get('direccion').hasError('required') && 
+    sigupForm.get('direccion').touched">
+Campo requerido, Ingrese su direccion
+    </div-->
+</div>
+    <div class="col-md-6 mb-3">
+    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Estado de procedencia</label>
+  <select FormControlName="estado" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+    <option selected>Elige...</option>
+    <option value="1">Puebla</option>
+    <option value="2">México</option>
+    <option value="3">Hidalgo</option>
+    <option value="3">Veracruz</option>
+  </select>
+  <!--div *ngIf="sigupForm.get('estado').hasError('required') && sigupForm.get('estado').touched">
+    Campo requerido, Seleccione su estado de procedencia
+</div-->
+</div>
+    <div class="col-md-6 mb-3">
+    <label>Correo</label>
+    <input FormControlName="correo" class="form-control" type="text"><br>
+        <!--div *ngIf="sigupForm.get('correo').hasError('required') && 
+    sigupForm.get('correo').touched">
+Campo requerido, Ingrese su correo
+    </div-->
+</div>
+    <div class="col-md-6 mb-3">
+        <label>Contraseña</label>
+        <input FormControlName="contrasenia" class="form-control" type="password">
+        <!--div *ngIf="sigupForm.get('contrasenia').hasError('required') && sigupForm.get('contrasenia').touched">
+            *Campo requerido, Ingrese su contraseña
+        </div-->
+    </div>
+    
+    <button type="submit" class="btn btn-outline-primary">Enviar</button>
+</div>
 </form>
