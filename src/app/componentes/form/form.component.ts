@@ -11,18 +11,18 @@ export class FormComponent implements OnInit {
   constructor(
     private _builder: FormBuilder
   ) { 
-    this.sigupForm=this._builder.group({
-      nombre: ['', Validators.required],//vacio es el primer valor
-      apellidos:['', Validators.required],//validators.require para requerido
-      email:['', Validators.compose([Validators.email, Validators.required])],
-      contrasenia:['', Validators.required],
+    this.form-gruop=this._builder.group({
+      nombre: ['', Validators.required],
+      genero:['',Validators.required],
+      apellidos:['', Validators.required],
+      direccion:['', Validators.required],
       estado:['', Validators.required],
-      sexo:['',Validators.required],
-      fecha:['', Validators.required]
+      correo:['', Validators.compose([Validators.email, Validators.required])],
+      contrasenia:['', Validators.required]
     })
   }
 
-  sigupForm: FormGroup
+  form-group: FormGroup
 
   ngOnInit(): void {
   }
