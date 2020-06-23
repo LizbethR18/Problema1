@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-saludar',
   templateUrl: './saludar.component.html',
   styleUrls: ['./saludar.component.css']
 })
-export class SaludarComponent implements OnInit {
-  @input() nombre:string = 'Lizbeth';
-  @output() saludar: EventEmitter<string> = new EventEmitter<string>();
+export class SaludarComponent {
+  @Input() nombre:string = 'Lizbeth';
+  @Output() saludar: EventEmitter<string> = new EventEmitter<string>();
   
   nombres: Array<string>= [];
   nombreList:string="Jaziel"
