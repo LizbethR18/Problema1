@@ -6,12 +6,12 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent {
 
   constructor(
     private _builder: FormBuilder
   ) { 
-    this.form-gruop=this._builder.group({
+    this.form-group=this._builder.group({
       nombre: ['', Validators.required],
       genero:['',Validators.required],
       apellidos:['', Validators.required],
