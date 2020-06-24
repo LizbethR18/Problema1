@@ -1,1 +1,19 @@
-<app-form></app-form>
+<!--app-form></app-form-->
+
+<saludar-app #mivariable [nombre]="name" (saludar)="onSaludar($event)"></saludar-app>
+<div class="w3-container">
+<p>
+    Escribiendo <span [ngClass]="validando(mivariable.nombreLista)">{{mivariable.nombreLista}}</span>
+</p>
+<div class="w3-light-grey">
+    <div class="w3-container w3-red w3-center" style="width:25%">10%</div>
+  </div><br>
+  
+  <div class="w3-light-grey">
+    <div class="w3-container w3-yellow w3-center" style="width:50%">50%</div>
+  </div><br>
+  
+  <div class="w3-light-grey">
+    <div class="w3-container w3-green" style="width:75%">75%</div>
+  </div>
+</div>
